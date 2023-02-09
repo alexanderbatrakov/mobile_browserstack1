@@ -1,9 +1,8 @@
-package android.selenide;
+package browserstack.selenide;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import drivers.BrowserstackDriver;
-import drivers.BrowserstackDriverIOS;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -16,7 +15,7 @@ class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = BrowserstackDriverIOS.class.getName();
+        Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
     }
 
@@ -30,11 +29,8 @@ class TestBase {
     void addAttachments() {
         String sessionId = sessionId().toString();
 
-//        Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-
         closeWebDriver();
-
         Attach.addVideo(sessionId);
     }
 }
