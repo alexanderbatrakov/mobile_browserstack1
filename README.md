@@ -1,4 +1,4 @@
-# mobile_browserstack1
+## mobile_browserstack1
 To run tests use command:
 
 ```bash
