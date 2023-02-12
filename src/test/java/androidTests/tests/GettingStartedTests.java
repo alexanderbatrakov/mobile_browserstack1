@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.id;
 
-@Tag("android")
 public class GettingStartedTests extends TestBase {
 
     @Test
