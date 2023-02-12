@@ -1,6 +1,6 @@
 package drivers;
 
-import browserstack.config.ProjectConfig;
+import androidTests.config.ProjectConfig;
 import com.codeborne.selenide.WebDriverProvider;
 import lombok.SneakyThrows;
 import org.aeonbits.owner.ConfigFactory;
@@ -28,7 +28,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.key", projectConfig.getPassword());
 
         // Set URL of the application under test
-        mutableCapabilities.setCapability("app", projectConfig.getAppUrl());
+        mutableCapabilities.setCapability("app", "bs://b66f7f822e5384ae2824677ba6d124d6262c2cfc");
         //bs://0af93fe636add84884ba9631e69d7fe4f7e4c9e1
 
         // Specify device and os_version for testing
@@ -47,7 +47,7 @@ public class BrowserstackDriver implements WebDriverProvider {
 
     public static URL getBrowserstackUrl() {
         try {
-            return new URL(projectConfig.getRemoteBSUrl());
+            return new URL("http://hub.browserstack.com/wd/hub");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

@@ -1,6 +1,6 @@
 package helpers;
 
-import browserstack.config.ProjectConfig;
+import androidTests.config.ProjectConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static helpers.CustomApiListener.withCustomTemplates;
