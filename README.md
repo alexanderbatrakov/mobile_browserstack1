@@ -1,5 +1,5 @@
 ## mobile_browserstack1
-To run tests localy:
+To run tests locally:
 ```bash
 gradle clean test -Denv=local -DdeviceName={device name} -DosVersion={os version}
 ```
